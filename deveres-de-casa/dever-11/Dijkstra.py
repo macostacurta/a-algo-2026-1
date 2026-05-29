@@ -2,7 +2,7 @@ import random
 import heapq
 
 def gerar_grafo_aleatorio(num_nos, num_arestas, peso_maximo=20):
-    """Gera um grafo não direcionado ponderado com o número especificado de nós e arestas."""
+    
     
     grafo = {i: {} for i in range(1, num_nos + 1)}
     arestas_adicionadas = 0
@@ -22,7 +22,7 @@ def gerar_grafo_aleatorio(num_nos, num_arestas, peso_maximo=20):
     return grafo
 
 def dijkstra(grafo, inicio, destino):
-    """Implementação do Algoritmo de Dijkstra usando fila de prioridade (Min-Heap)."""
+    
     
     distancias = {no: float('inf') for no in grafo}
     distancias[inicio] = 0
@@ -55,7 +55,7 @@ def dijkstra(grafo, inicio, destino):
     return distancias, nos_anteriores
 
 def reconstruir_rota(nos_anteriores, inicio, destino):
-    """Reconstrói a rota final navegando de trás para frente usando o dicionário de nós anteriores."""
+    
     rota = []
     atual = destino
     
